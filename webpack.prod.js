@@ -21,6 +21,10 @@ module.exports = {
         test: /\.html$/,
         exclude: /node_modules/,
         use: [ "html-loader" ]
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: ['url-loader?limit=100000']
       }
     ]
   },

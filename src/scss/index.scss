@@ -1,0 +1,65 @@
+@font-face {
+  font-family: alegreya;
+  src: url('../fonts/AlegreyaSans-Light.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: alegreya;
+  src: url('../fonts/AlegreyaSans-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: alegreya;
+  src: url('../fonts/AlegreyaSans-LightItalic.ttf') format('truetype');
+  font-style: italic;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: kingbasil;
+  src: url('../fonts/King-Basil-Lite.otf') format('opentype');
+  font-style: normal;
+  font-weight: normal;
+}
+.kingbasil {
+  font-family: kingbasil;
+  line-height: 1.85;
+}
+
+$tablet: 935px;
+$mobile: 550px;
+
+// default font set
+$em-base: 62.5%; // usually 10px for math
+html {
+  font-size: $em-base;
+  @media screen and (max-width: $tablet) {
+    font-size: $em-base - 10%;
+  }
+  @media screen and (max-width: $mobile) {
+    font-size: $em-base - 22%;
+  }
+}
+body {
+  font: {
+    family: alegreya;
+    weight: normal;
+    style: normal;
+    size: 170%;
+  }
+  color: black;
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 3em;
+}
