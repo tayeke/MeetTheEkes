@@ -30,6 +30,20 @@
   line-height: 1.85;
 }
 
+@font-face {
+  font-family: minion;
+  src: url('../fonts/MinionPro-Regular.otf') format('opentype');
+  font-style: normal;
+  font-weight: normal;
+}
+.minion {
+  font-family: minion;
+}
+
+.green {
+  color: #7ea193;
+}
+
 $tablet: 935px;
 $mobile: 550px;
 
@@ -54,12 +68,159 @@ body {
   color: black;
   -webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+
+  // background-image: linear-gradient(#bfd2ec, #9ac6e3);
+
 }
 
 p {
   line-height: 1.2;
+  padding: 0.8rem 0;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 h1 {
   font-size: 3em;
+}
+
+#heading {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #eaf0f3;
+  overflow: hidden;
+  h1 {
+    color: #487797;
+  }
+  @media screen and (max-width: $mobile) {
+    display: block;
+  }
+}
+#app {
+  margin-top: -5px;
+  background: white;
+}
+
+#headingLeft {
+  flex: 1;
+  text-align: center;
+  padding: 15% 2rem 2rem;
+  background-color: #eaf0f3;
+  @media screen and (max-width: $mobile) {
+    position: relative;
+    z-index: 2;
+  }
+}
+#headingRight {
+  img {
+    max-width: 100%;
+  }
+  @media screen and (max-width: $mobile) {
+    position: relative;
+    margin-top: -35%;
+    z-index: 1;
+  }
+}
+
+.button {
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background: #f5e893;
+  border: none;
+  font: {
+    family: alegreya;
+    weight: bold;
+    size: 1.8rem;
+  }
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  border: 2px solid #7ea193;
+  box-sizing: border-box;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  margin: 0 1rem;
+  cursor: pointer;
+  -webkit-transition: background-color 600ms;
+  transition: background-color 600ms;
+  &:hover {
+    background: #7ea193;
+  }
+  &.add {
+    background: #7ea193;
+    padding: 0 0.6rem;
+    margin: 0;
+    font-size: 3rem;
+    line-height: 1;
+    color: white;
+  }
+}
+
+a {
+  color: #487797;
+  cursor: pointer;
+}
+
+div.vex, .vex.vex-theme-flat-attack .vex-dialog-button.vex-dialog-button, .vex.vex-theme-flat-attack .vex-content.vex-content {
+  font-family: alegreya !important;
+}
+.vex.vex-theme-flat-attack .vex-dialog-button.vex-dialog-button-secondary.vex-dialog-button-secondary {
+  color: #f8d9ce;
+}
+.vex.vex-theme-flat-attack .vex-dialog-button.vex-dialog-button-primary.vex-dialog-button-primary {
+  background-color: #487797;
+}
+
+input[type="text"] {
+  outline-color: #f5e893;
+  appearance: none;
+  -webkit-appearance: none;
+  padding: 1rem;
+  border: 2px solid #7ea193;
+  border-radius: 3px;
+  font-size: 1.8rem;
+  margin: 0.8rem 0;
+  display: block;
+}
+input[type="radio"] {
+
+}
+
+#rsvpName {
+  display: inline-block;
+}
+#rsvpRadios {
+  display: inline-block;
+  padding-left: 2rem;
+  text-align: right;
+  label {
+    display: block;
+  }
+}
+#rsvpList {
+  column-count: 2;
+  font-weight: bold;
+  li {
+    list-style-position: outside;
+    list-style-type: circle;
+  }
+}
+
+#faq {
+  padding: 6rem;
+}
+dl {
+  dt {
+    line-height: 2;
+    font-weight: bold;
+    padding-top: 2rem;
+    font-size: 2.4rem;
+  }
+  dd {
+
+  }
 }

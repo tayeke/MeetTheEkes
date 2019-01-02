@@ -1,4 +1,13 @@
+#mapWrapper {
+  // width: 100%;
+  overflow: hidden;
+  padding: 8rem;
+  background-image: linear-gradient(white, #bfd2ec 50%);
+}
+
 #map {
-    width: 750px;
-    height: 600px;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  box-sizing: border-box;
 }

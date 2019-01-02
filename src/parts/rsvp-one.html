@@ -1,0 +1,14 @@
+<div id="rsvpName">
+  <p class="bold">RSVP</p>
+  <input required id="fullName" name="fullName" type="text" placeholder="Your Full Name" onchange="validateFullName(event)" oninput="validateFullName(event)" autocomplete="off">
+</div>
+<div id="rsvpRadios">
+  <label for="going">
+    <span>Going</span>
+    <input required id="going" name="going" type="radio" value="1" oninvalid="this.setCustomValidity('Please let us know if you are attending')" onchange="resetRadioValidity()">
+  </label>
+  <label for="notGoing">
+    <span>Not Going</span>
+    <input required id="notGoing" name="going" type="radio" value="0" oninvalid="this.setCustomValidity('Please let us know if you are attending')" onchange="resetRadioValidity()">
+  </label>
+</div>

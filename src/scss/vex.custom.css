@@ -1,0 +1,11 @@
+.vex.vex-theme-flat-attack .vex-content {
+  -webkit-animation: vex-fadein .5s;
+  animation: vex-fadein .5s;
+}
+.vex-overlay.vex-closing {
+  -webkit-animation: vex-fadeout .5s forwards;
+  animation: vex-fadeout .5s forwards; }
+
+.vex.vex-theme-flat-attack.vex-closing .vex-content {
+  -webkit-animation: vex-fadeout .5s forwards;
+  animation: vex-fadeout .5s forwards; }
