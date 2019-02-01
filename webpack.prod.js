@@ -23,7 +23,7 @@ module.exports = {
         use: [ "html-loader" ]
       },
       {
-        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        test: /\.(woff|woff2|eot|ttf|otf|png|jpg)$/,
         use: ['url-loader?limit=100000']
       }
     ]

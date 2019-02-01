@@ -194,7 +194,7 @@ function rsvpList(e) {
       ]
     });
 
-    firebase.firestore().collection("rsvp").get().then(function(querySnapshot) {
+    firebase.firestore().collection("rsvp").where('going', '==', true).get().then(function(querySnapshot) {
       querySnapshot.forEach(function(rsvpDoc) {
         rsvpDoc.data().attendees.forEach((attendant) => {
           $('<li>'+attendant.firstName + ' ' + attendant.lastName+'</li>').appendTo('#rsvpList');
