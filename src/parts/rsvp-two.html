@@ -1,3 +1,6 @@
+<h3>Your cell number so we can call you with any important updates before or the day of:</h3>
+<input required id="phone" pattern="[0-9]{3}.*[0-9]{3}.*[0-9]{4}" name="phone" type="tel" placeholder="Cell Number" onchange="this.setCustomValidity('')" oninput="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Please give us a cell number so we can reach you on the island.')" autocomplete="off">
+
 <h3>Who else are you bringing?</h3>
 <input id="plus1" name="plus1" type="text" placeholder="Their Full Name" onchange="validateFullName(event)" oninput="validateFullName(event)" autocomplete="off">
 <button type="button" id="addPlus1" class="button add">+</button>

@@ -1,8 +1,64 @@
 #mapWrapper {
   // width: 100%;
   overflow: hidden;
-  padding: 8rem;
+  padding: 8rem 8rem 15rem 8rem;
   background-image: linear-gradient(white, #bfd2ec 50%);
+  position: relative;
+
+  &:before {
+      content: '\0a00';
+      display: block;
+      background-image: url('../../src/img/flower-2.png');
+      width: 195px;
+      height: 350px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      bottom: 10rem;
+      left: -3rem;
+      z-index: 9999;
+  }
+
+  &:after {
+      content: '\0a00';
+      display: block;
+      background-image: url('../../src/img/flower-1.png');
+      width: 129px;
+      height: 200px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      bottom: 35rem;
+      right: 0;
+      z-index: 9999;
+  }
+
+  .salmon {
+      display: block;
+      background-image: url('../../src/img/salmon-1.png');
+      width: 300px;
+      height: 175px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 13rem;
+      left: -2rem;
+      z-index: 9999;
+  }
+
+  .sea {
+      display: block;
+      background-image: url('../../src/img/sea.png');
+      width: 300px;
+      height: 300px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      bottom: -10rem;
+      right: 0;
+      z-index: 0;
+  }
+
 }
 
 #map {
@@ -10,4 +66,6 @@
   height: 600px;
   overflow: hidden;
   box-sizing: border-box;
+  position: relative;
+  z-index: 1;
 }

@@ -187,7 +187,7 @@ div.vex, .vex.vex-theme-flat-attack .vex-dialog-button.vex-dialog-button, .vex.v
   background-color: #487797;
 }
 
-input[type="text"] {
+input[type="text"], input[type="tel"] {
   outline-color: #f5e893;
   appearance: none;
   -webkit-appearance: none;

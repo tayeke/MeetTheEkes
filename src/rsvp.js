@@ -144,6 +144,7 @@ function rsvpPartTwo() {
           return false;
         }
         const _this = this;
+        rsvp.phone = $.trim($("input[name='phone']").val());
         $('input[id^="plus"]').each((i, item) => {
           let name = $.trim($(item).val());
           if(name.length) {
@@ -154,22 +155,23 @@ function rsvpPartTwo() {
               lastName: lastName,
               firstName: firstName
             });
-            const rsvpDoc = firebase.firestore().collection("rsvp")
-              .doc(rsvpKey(rsvp))
-              .update({
-                attendees: rsvp.attendees
-              })
-              .then(function() {
-                _this.close(_this.id);
-                vex.dialog.alert('Thanks '+rsvp.firstName+'. Please read all the information on our website so you can get informed about attending our wedding on Orcas Island.');
-              })
-              .catch(function(error) {
-                _this.close(_this.id);
-                console.log(error);
-                vex.dialog.alert('There was an issue capturing your response, please email us at taylor.rebecca.eke@gmail.com 🤞🏻');
-              });
           }
         });
+        const rsvpDoc = firebase.firestore().collection("rsvp")
+          .doc(rsvpKey(rsvp))
+          .update({
+            phone: rsvp.phone,
+            attendees: rsvp.attendees
+          })
+          .then(function() {
+            _this.close(_this.id);
+            vex.dialog.alert('Thanks '+rsvp.firstName+'. Please read all the information on our website so you can get informed about attending our wedding on Orcas Island.');
+          })
+          .catch(function(error) {
+            _this.close(_this.id);
+            console.log(error);
+            vex.dialog.alert('There was an issue capturing your response, please email us at taylor.rebecca.eke@gmail.com 🤞🏻');
+          });
       }}),
       $.extend({}, vex.dialog.buttons.NO, { className: 'vex-dialog-button-secondary', text: 'It\'s Just Me', click: function(e) {
         this.close(this.id);
