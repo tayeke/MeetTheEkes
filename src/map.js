@@ -58,7 +58,7 @@ function initMap() {
 
     map = new google.maps.Map(document.getElementById('map'), {
       center: initLatLng,
-      zoom: 11,
+      zoom: (window.screen.width > 550) ? 11 : 9,
       // mapTypeId: google.maps.MapTypeId.SATELLITE,
       zoomControl: true,
       mapTypeControl: true,

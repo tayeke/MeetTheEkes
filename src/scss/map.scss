@@ -1,7 +1,11 @@
+$mobile: 550px;
 #mapWrapper {
   // width: 100%;
   overflow: hidden;
   padding: 8rem 8rem 15rem 8rem;
+  @media screen and (max-width: $mobile) {
+    padding: 4rem;
+  }
   background-image: linear-gradient(white, #bfd2ec 50%);
   position: relative;
 
@@ -17,6 +21,9 @@
       bottom: 10rem;
       left: -3rem;
       z-index: 9999;
+      @media screen and (max-width: $mobile) {
+        display: none;
+      }
   }
 
   &:after {
@@ -31,6 +38,10 @@
       bottom: 35rem;
       right: 0;
       z-index: 9999;
+      @media screen and (max-width: $mobile) {
+          bottom: 15rem;
+          right: -2rem;
+      }
   }
 
   .salmon {
@@ -44,6 +55,9 @@
       top: 13rem;
       left: -2rem;
       z-index: 9999;
+      @media screen and (max-width: $mobile) {
+        display: none;
+      }
   }
 
   .sea {
@@ -57,6 +71,9 @@
       bottom: -10rem;
       right: 0;
       z-index: 0;
+      @media screen and (max-width: $mobile) {
+        display: none;
+      }
   }
 
 }
@@ -68,4 +85,7 @@
   box-sizing: border-box;
   position: relative;
   z-index: 1;
+  @media screen and (max-width: $mobile) {
+    height: 300px;
+  }
 }
