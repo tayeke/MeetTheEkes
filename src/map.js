@@ -5,49 +5,84 @@ var map,
             key: "ferry",
             icon: 'ferry.png',
             size: [55, 55],
-            content: "<span class='kingbasil'>the ferry info</span>",
+            content: `
+            <div class="center-text">
+                <h3 class="two-em blue">Ferry Terminal:</h3>
+                <p class="minion one-five-em blue">The only way to reach Orcas Island is by ferry, via Anacortes if you’re coming from Portland or Seattle.</p>
+            </div>
+            `,
             latlng: {lat: 48.51, lng: -122.6828207}
         },
         {
             key: "venue",
             icon: 'heart.png',
             size: [35, 35],
-            content: "<span class='kingbasil'>the venue info</span>",
+            content: `
+            <div class="center-text">
+                <h3 class="two-em darker-green">Pebble Cove Farm:</h3>
+                <p class="minion one-five-em darker-green">The venue! Say hi to the goats and pigs!</p>
+            </div>
+            `,
             latlng: {lat: 48.641208, lng: -122.9928207}
         },
         {
             key: "orca",
             icon: 'orca-large.png',
             size: [75, 75],
-            content: "<span class='kingbasil'>the sights info</span>",
+            content: `
+            <div class="center-text">
+                <h3 class="two-em darker-green">Whale watching:</h3>
+                <p class="minion one-five-em darker-green">The San Juan Islands are a home to a resident orca pod, called J pod, that you might be lucky enough to spot from the shore or on a whale watching trip with a local outfitter!</p>
+            </div>
+            `,
             latlng: {lat: 48.5250375, lng: -122.9519777}
         },
         {
             key: "mountain",
             icon: 'mountain.png',
             size: [65, 65],
-            content: "<span class='kingbasil'>the park info</span>",
+            content: `
+            <div class="center-text">
+                <h3 class="two-em darker-green">Moran State Park:</h3>
+                <p class="minion one-five-em darker-green">If you’re hoping to camp, head here. Don’t miss the great views from Mount Constitution!</p>
+            </div>
+            `,
             latlng: {lat: 48.665, lng: -122.7928207}
         },
         {
             key: "friday-harbor",
             icon: 'hotel.png',
             size: [55, 55],
-            content: "<span class='kingbasil'>friday harbor</span>",
+            content: `
+            <div class="center-text">
+                <h3 class="two-em blue">Friday Harbor:</h3>
+                <p class="minion one-five-em blue">If you have time, Friday Harbor on neighboring San Juan Island has lots of fun restaurants, shops, and scenery to explore. You can also choose to stay there and take a ferry to Orcas Island for the wedding.</p>
+            </div>
+            `,
             latlng: {lat: 48.550, lng: -123.04}
         },
         {
             key: "deer-harbor",
             icon: 'hotel.png',
             size: [55, 55],
-            content: "<span class='kingbasil'>deer harbor</span>",
+            content: `
+            <div class="center-text">
+                <h3 class="two-em blue">Deer Harbor:</h3>
+                <p class="minion one-five-em blue">Small marina village nearby Pebble Cove Farm (the venue). A great place to look for lodging.</p>
+            </div>
+            `,
             latlng: {lat: 48.615, lng: -123.015}
         },
         {
             key: "eastsound",
             icon: 'rural.png',
             size: [55, 55],
-            content: "<span class='kingbasil'>Eastsound</span>",
+            content: `
+                <div class="center-text">
+                    <h3 class="two-em blue">Eastsound:</h3>
+                    <p class="minion one-five-em blue">The hub of Orcas Island. Shopping and dining can be found here.</p>
+                </div>
+            `,
             latlng: {lat: 48.715, lng: -122.9}
         },
     ];
@@ -79,7 +114,8 @@ function initMap() {
 
     function openMarker(marker, content) {
       var infoWindow = new google.maps.InfoWindow({
-          content: content
+          content: content,
+          maxWidth: 200
       });
       infoWindow.open(map, marker);
     }

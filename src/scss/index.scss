@@ -43,6 +43,12 @@
 .green {
   color: #7ea193;
 }
+.darker-green {
+  color: darken(#7ea193, 20%);
+}
+.blue {
+  color: #487797;
+}
 
 $tablet: 935px;
 $mobile: 550px;
@@ -236,4 +242,18 @@ dl {
   dd {
 
   }
+}
+
+.center-text {
+    text-align: center;
+}
+
+.three-em {
+    font-size: 3rem;
+}
+.two-em {
+    font-size: 2rem;
+}
+.one-five-em {
+    font-size: 1.5rem;
 }
