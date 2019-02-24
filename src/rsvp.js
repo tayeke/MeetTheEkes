@@ -260,7 +260,7 @@ window.validateAnswer = function(e) {
 
 function giftClick() {
   vex.dialog.open({
-    unsafeMessage: '<p>In lieu of physical gifts we are asking for donation to help us get to our honeymoon in Fiji! Click the link to go to our honeymoon travel pool on Paypal. Paypal is our preferred platform for contributions, because you can send us gifts without any fees if you connect your bank account.</p><br><a href="https://paypal.me/pools/c/8aXbOHLFBl" target="_blank">Give to our pool</a>',
+    unsafeMessage: '<p>In lieu of physical gifts we are asking for donations to help us get to our honeymoon in Fiji! Click the link to go to our honeymoon travel pool on Paypal. Paypal is our preferred platform for contributions, because you can send us gifts without any fees if you connect your bank account.</p><br><a href="https://paypal.me/pools/c/8aXbOHLFBl" target="_blank">Give to our pool</a>',
     buttons: [
       $.extend({}, vex.dialog.buttons.YES, { className: 'vex-dialog-button-primary', text: 'Ok', click: function(e) {
         this.close(this.id);
